@@ -13,7 +13,7 @@ yarn install
 bin/console assets:install
 bin/console doctrine:database:create
 bin/console doctrine:migrations:migrate
-bin/console fos:user:change-password superadmin superadmin@localhost.com 1234 --superadmin
+bin/console fos:user:create superadmin superadmin@localhost.com 1234 --superadmin
 
 ```
 
