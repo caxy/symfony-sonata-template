@@ -1,0 +1,17 @@
+{% block user_block %}
+    <li class="dropdown">
+        {% if app.user %}
+            <ul class="list-group text-center">
+                <li class="list-group-item">
+                    Welcome, {{ app.user.email }}
+                </li>
+                <li class="list-group-item">
+                    <a href="{{ url('fos_user_profile_edit') }}">Profile</a>
+                </li>
+                <li class="list-group-item">
+                    <a href="{{ url('fos_user_security_logout') }}">{{ 'layout.logout'|trans({}, 'FOSUserBundle') }}</a>
+                </li>
+            </ul>
+        {% endif %}
+    </li>
+{% endblock %}
